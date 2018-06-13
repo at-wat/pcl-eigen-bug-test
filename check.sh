@@ -5,6 +5,7 @@ set -e
 dir=$(dirname $0)
 
 cd $dir/pcl
+rm -rf build || true
 mkdir -p build
 cd build
 
@@ -29,9 +30,9 @@ cmake .. \
   -DBUILD_recognition=OFF \
   -DBUILD_stereo=OFF \
   -DBUILD_tools=OFF \
-  -DBUILD_filters=ON
+  -DBUILD_filters=ON > /dev/null || exit 125
 
-make -j
+make -j > /dev/null || exit 125
 rm -rf /usr/local
 mkdir -p /usr/local
 make install

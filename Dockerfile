@@ -10,6 +10,7 @@ RUN apt-get -qq update \
     libeigen3-dev \
     libflann-dev \
     libgl-dev \
+    libgtest-dev \
     make \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
