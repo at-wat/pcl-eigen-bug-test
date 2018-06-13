@@ -21,4 +21,4 @@ cd build
 cmake ..
 make
 
-exec passthrough
+exec ./passthrough
