@@ -6,9 +6,10 @@ RUN apt-get -qq update \
     ca-certificates \
     cmake \
     git-core \
-    libeigen3-dev \
     libboost-all-dev \
+    libeigen3-dev \
     libflann-dev \
+    libgl-dev \
     make \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
