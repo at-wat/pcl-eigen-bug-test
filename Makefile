@@ -10,3 +10,4 @@ init:
 test:
 	cd pcl; git bisect start $(VERSION_BAD) $(VERSION_GOOD)
 	cd pcl; git bisect run $(MAKE_PATH)/check.sh
+	cd pcl; git bisect view
