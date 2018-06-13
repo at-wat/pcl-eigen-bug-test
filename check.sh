@@ -5,7 +5,6 @@ set -e
 dir=$(dirname $0)
 
 cd $dir/pcl
-rm -rf build || true
 mkdir -p build
 cd build
 
@@ -15,7 +14,7 @@ make -j
 make install
 
 cd $dir/test
-rm -rf build
+rm -rf build || true
 mkdir -p build
 cd build
 cmake ..
