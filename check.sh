@@ -32,6 +32,8 @@ cmake .. \
   -DBUILD_filters=ON
 
 make -j
+rm -rf /usr/local
+mkdir -p /usr/local
 make install
 
 cd $dir/test
