@@ -44,4 +44,4 @@ cd build
 cmake ..
 make
 
-exec ./passthrough
+./passthrough || exit -1
